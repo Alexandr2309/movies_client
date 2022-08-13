@@ -8,7 +8,7 @@ const nextConfig = {
 		return [
 			{
 				source: '/api/:path*',
-				destination: 'https://kinopoiskapiunofficial.tech/api/:path*'
+				destination: 'https://kinopoiskapiunofficial.tech/:path*'
 			}
 		]
 	}
