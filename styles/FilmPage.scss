@@ -1,0 +1,200 @@
+.film-info {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0px;
+
+  & __img {
+  }
+
+  &__poster {
+    flex: 1 1 auto;
+    margin-bottom: 24px;
+  }
+
+  & aside {
+    background-color: #ffffff;
+    flex: 0 1 40%;
+
+    & div {
+    }
+  }
+
+  &__main {
+    flex: 1 1 60%;
+
+    & p {
+      font-size: 16px;
+      color: #393939;
+      line-height: 1.38;
+    }
+
+  }
+
+  &__trailer {
+    flex: 0 1 auto;
+    max-height: 240px;
+    position: relative;
+
+    &__block {
+      width: 100%;
+      max-width: 300px;
+      display: flex;
+      position: absolute;
+      align-items: flex-end;
+      padding-right: 25px;
+      justify-content: space-between;
+      left: 10px;
+      bottom: 20px;
+    }
+
+    &__btn {
+      font-size: 14px !important;
+      padding: 10px !important;
+      border-radius: 15px !important;
+      flex: 0 1 auto;
+    }
+
+    & span {
+      flex: 0 1 auto;
+      color: white;
+      padding: 4px 6px;
+      font-family: Graphik, sans-serif;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.9);
+      border-radius: 4px;
+      background-color: rgba(34, 34, 34, 0.9);
+    }
+  }
+
+  & * {
+    font-family: Graphik;
+  }
+
+  font-size: 13px;
+
+  &__title {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    font-style: italic;
+    color: rgba(31, 31, 31, 0.6);
+    display: flex;
+    font-weight: 400;
+    align-items: center;
+    margin: 0;
+
+    column-gap: 15px;
+
+    & span {
+      font-size: 18px;
+      padding: 5px;
+      border: 1px solid black;
+    }
+  }
+
+  &__about-block {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 5px;
+    margin-bottom: 25px;
+
+    & * {
+      font-size: 14px;
+    }
+  }
+
+  &__label-block {
+    display: flex;
+    align-items: baseline;
+    padding: 8px 0px;
+  }
+
+  &__first-label {
+    width: 160px;
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  &__second-label {
+    flex: 1;
+  }
+
+  &__watch {
+    cursor: pointer;
+    background: $primary-red;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    color: #ffffff;
+    -webkit-box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.6);
+    box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.6);
+  }
+
+  &__btn-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 45px;
+
+    & * {
+      font-size: 16px;
+      font-weight: 500;
+      transition: all 0.2s ease 0s;
+    }
+  }
+
+  @keyframes btn-flip {
+    0% {
+      transform: rotate3d(1, 0, 0, 0deg);
+    }
+    50% {
+      transform: rotate3d(1, 0, 0, 180deg);
+    }
+    100% {
+      transform: rotate3d(1, 0, 0, 360deg);
+    }
+  }
+
+  &__favorite {
+    -webkit-box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.6);
+    box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.6);
+    padding: 8px 20px 8px 30px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    background: #edeff0;
+    border: none;
+    position: relative;
+
+    &::before {
+      content: '+';
+      font-size: 18px;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      left: 15px;
+    }
+
+    &.active {
+      animation-name: btn-flip;
+      animation-duration: 1.2s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: backwards;
+      animation-iteration-count: 1;
+      animation-play-state: running;
+      outline: 1.5px solid $primary-red;
+
+      &::before {
+        content: '\2713';
+        left: 10px;
+        color: rgba(216, 35, 42, 0.66);
+      }
+    }
+  }
+}

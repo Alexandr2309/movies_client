@@ -1,0 +1,32 @@
+.modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transition: all .5s ease;
+  opacity: 0;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.body {
+  width: 60%;
+  box-sizing: content-box;
+  padding: 25px;
+  transition: all .4s ease;
+  transform: translateY(-200px);
+
+  &.active {
+    transform: translateY(0px);
+  }
+}

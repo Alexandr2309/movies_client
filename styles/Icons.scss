@@ -1,0 +1,51 @@
+.icons ul {
+  list-style-type: none;
+  display: flex;
+  column-gap: 41px;
+}
+
+.icons ul li {
+  padding: 5px;
+  position: relative;
+}
+
+.icons ul li img {
+  opacity: 1;
+}
+
+.icons ul li.active img {
+  filter: brightness(0.2);
+  -webkit-filter: brightness(0.2);
+  -moz-filter: brightness(0.2);
+  -o-filter: brightness(0.2);
+  -ms-filter: brightness(0.2);
+}
+
+.icons {
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: center;
+}
+
+.textHover {
+  z-index: 33;
+  border-radius: 8px;
+  padding: 10px 10px;
+  background-color: $primary-red;
+  font-size: 13px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 15px;
+  position: absolute;
+}
+
+.textHover::before {
+  content: '';
+  position: absolute; /* Абсолютное позиционирование */
+  left: 50%;
+  transform: translateX(-50%);
+  top: -14px; /* Положение треугольника */
+  border: 10px solid transparent; /* Прозрачные границы */
+  border-bottom: 10px solid $primary-red; /* Добавляем треугольник */
+}

@@ -1,0 +1,43 @@
+.main {
+	height: 300px;
+	width: 550px;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.box {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.container {
+	height: 100%;
+	display: flex;
+	gap: 20px;
+	transition: all 0.4s ease-in;
+}
+
+.arrow {
+	transition: all 0.2s ease-in;
+	position: absolute;
+	z-index: 9;
+	cursor: pointer;
+	top: 50%;
+	transform: translateY(-50%);
+	color: white;
+
+	&:nth-of-type(1) {
+		left: 10px;
+	}
+
+	&:nth-of-type(2) {
+		right: 10px;
+	}
+
+	&.hidden {
+		opacity: 0;
+		pointer-events: none;
+	}
+}

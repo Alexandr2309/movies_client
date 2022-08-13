@@ -1,0 +1,38 @@
+.container {
+    padding: 0 30px;
+}
+
+.main {
+    min-height: 100vh;
+    padding: 1rem 0;
+    flex: 1;
+}
+
+.footer {
+    display: flex;
+    flex: 1;
+    padding: 2rem 0;
+    border-top: 1px solid #eaeaea;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+@media (max-width: 598px) {
+    .main {
+        padding: 0px 0px;
+    }
+}
+
+@media (max-width: 598px) {
+    .grid {
+        width: 100%;
+        flex-direction: column;
+    }
+}

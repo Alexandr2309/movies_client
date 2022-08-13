@@ -1,0 +1,135 @@
+.grid {
+	position: relative;
+	display: grid;
+	padding-bottom: 35px;
+	grid-auto-flow: row;
+	grid-template: repeat(5, 189px) / repeat(4, minmax(auto, 1fr));
+	column-gap: 22px;
+	row-gap: 22px;
+
+	&__film-name {
+		position: absolute;
+		z-index: 999;
+		color: #ffffff;
+		line-height: 1;
+		font-size: 16px;
+		font-weight: 600;
+		word-wrap: break-word;
+		letter-spacing: 3px;
+		bottom: 35px;
+		left: 15px;
+	}
+
+	&__likes-count {
+		display: flex;
+		column-gap: 12px;
+		align-items: center;
+		color: #ffffff;
+		position: absolute;
+		top: 15px;
+		left: 10px;
+		z-index: 99;
+	}
+
+	&__item {
+		position: relative;
+		overflow: hidden;
+		border-radius: 5px;
+
+		&__first-spec {
+			grid-row: span 2;
+
+			& .grid__content {
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+
+				.grid__item__first-spec__container {
+					position: relative;
+					height: 100%;
+					flex: 1 1 60%;
+				}
+			}
+		}
+
+		&__second-spec {
+			grid-column: span 2;
+
+			& iframe {
+			}
+
+			& .grid__content {
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+		}
+	}
+
+	&__content {
+		max-height: 100%;
+	}
+
+	&__img {
+		filter: brightness(0.5);
+	}
+}
+
+.rating {
+}
+
+.info {
+	padding: 20px 18px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	flex: 1 1 35%;
+	background: #ffffff;
+
+	&__name {
+		&__title {
+			font-size: 14px;
+			color: #3f444e;
+		}
+
+		&__text {
+			font-size: 14px;
+			color: #3f444e;
+			font-family: Calibri;
+		}
+	}
+
+	&__rating {
+		flex-wrap: wrap;
+
+		& *:not(.rating__items *) {
+			color: #3f444e;
+			font-size: 14px;
+			text-transform: capitalize;
+		}
+
+		& .react-icons {
+			width: 12px;
+			height: 12px;
+		}
+	}
+
+	&__date {
+		&__title {
+			font-size: 14px;
+			color: #3f444e;
+		}
+
+		&-time {
+			font-size: 14px;
+			color: #3f444e;
+			font-family: Calibri;
+		}
+	}
+
+	& > div {
+		display: flex;
+		column-gap: 12px;
+		align-items: center;
+	}
+}

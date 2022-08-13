@@ -1,0 +1,55 @@
+@import "./var";
+
+.burger {
+  height: 76px;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  padding: 0px 15px;
+
+  &Btn {
+    background: none;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    margin-right: 21px;
+    position: relative;
+    cursor: pointer;
+
+    & img {
+      width: 100% !important;
+      height: auto !important;
+      object-fit: cover;
+    }
+  }
+}
+
+.profile {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+}
+
+.signIn {
+  background-color: unset;
+  border: 1px solid $primary-red;
+  font-size: 18px;
+  padding: 5px 10px;
+  transition: background-color .25s ease;
+  border-radius: 5px;
+  font-size: 16px;
+  color: $primary-red;
+
+  &:hover {
+    background-color: $primary-red;
+    color: white;
+  }
+
+}
+
+@media (max-width: 786px) {
+}

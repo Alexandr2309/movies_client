@@ -1,0 +1,67 @@
+.form {
+  margin-top: 70px;
+  padding: 0px 15px;
+  text-align: center;
+  display: flex;
+  gap: 25px;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+
+  &Title {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  &Input {
+    width: 100%;
+    max-width: 500px;
+    flex: 1 1 auto;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    display: block;
+  }
+
+  &Submit {
+
+  }
+}
+
+
+.block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 1 auto;
+  max-width: 500px;
+  width: 100%;
+
+
+  &Input {
+    background-color: unset;
+    border: 1px solid #26ad26;
+    font-size: 18px;
+    padding: 10px;
+    transition: background-color .25s ease;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #26ad26;
+
+    &:hover {
+      background-color: #26ad26;
+      color: white;
+    }
+  }
+
+  & a {
+    color: #0068c8;
+    font-weight: 500;
+    transition: all .2s ease-in;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

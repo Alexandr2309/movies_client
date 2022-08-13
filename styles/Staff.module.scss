@@ -1,0 +1,47 @@
+.wrapper {
+	position: absolute;
+	left: 30px;
+	top: 185px;
+}
+
+.item {
+	transition: all 0.2s ease-in 0.001s;
+
+	&:not(:first-child) {
+		margin-top: 15px;
+	}
+
+	border-radius: 50%;
+	overflow: hidden;
+	width: 15px;
+	height: 15px;
+	background: #edeff0;
+	z-index: 9999;
+}
+
+@media (max-width: 998px) {
+	.wrapper {
+		top: 100px;
+	}
+	.item {
+		width: 10px;
+		height: 10px;
+	}
+}
+
+@media (max-width: 598px) {
+	.item {
+		&:not(:first-child) {
+			margin-top: 12px;
+		}
+	}
+	.wrapper {
+		top: 25px;
+	}
+}
+
+@media (max-width: 398px) {
+	.wrapper {
+		display: none;
+	}
+}
