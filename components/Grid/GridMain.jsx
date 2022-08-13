@@ -19,7 +19,7 @@ const GridMain = observer(({ films, type }) => {
 		() =>
 			setGrid((grid) => [
 				...grid,
-				<GridStructure films={filmsSlice(films, grid)} />
+				<GridStructure key={Math.random()} films={filmsSlice(films, grid)} />
 			]),
 		grid.length
 	)
@@ -27,8 +27,8 @@ const GridMain = observer(({ films, type }) => {
 	useEffect(() => {
 		if (!films.length) return
 		setGrid([
-			<GridStructure
-				films={films.slice(0, 20)}
+			<GridStructure key={Math.random()}
+										 films={films.slice(0, 20)}
 			/>
 		])
 	}, [films])

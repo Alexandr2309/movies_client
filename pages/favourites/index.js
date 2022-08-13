@@ -22,7 +22,7 @@ const Favourites = observer(() => {
 			na.push('/user/login', undefined, { shallow: true })
 		}
 		setLoading(false)
-	}, [userStore.user])
+	}, [])
 	
 	return (
 		<main style={{ padding: '30px', background: '#EDEFF0' }}>
