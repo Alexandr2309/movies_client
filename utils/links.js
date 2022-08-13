@@ -21,7 +21,7 @@ const objOfLinks = {
 export const headersConfig = {
 	headers: {
 		'X-API-KEY': `${KPOISK_KEY}`,
-		'Access-Control-Allow-Origin': '*'
+		mode: 'no-cors'
 	}
 }
 
