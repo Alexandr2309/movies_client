@@ -26,7 +26,9 @@ const BottomPanel = ({ info }) => {
 						width={14}
 						height={14}
 					/>
-					<span>{info.reviewsCount}</span>
+					<span>
+						{info.reviewsCount}
+					</span>
 				</div>
 			</div>
 		</div>
