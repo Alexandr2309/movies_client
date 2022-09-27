@@ -5,8 +5,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 Сайт доступен только в локальной версии, поэтому для начала вам нужно выкачать данный репозиторий на свою машину, после чего выполнить стандарнтую процедуру:
 
 ```bash
+npm install
 npm run dev
 # or
+yarn install
 yarn dev
 ```
 
